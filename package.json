@@ -1,0 +1,25 @@
+{
+  "name": "react-autofill",
+  "version": "1.0.0",
+  "description": "React autocomplete component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvraamMavridis/react-autofill.git"
+  },
+  "keywords": [
+    "react",
+    "autocomplete",
+    "autofill",
+    "component"
+  ],
+  "author": "Avraam Mavridis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvraamMavridis/react-autofill/issues"
+  },
+  "homepage": "https://github.com/AvraamMavridis/react-autofill#readme"
+}
