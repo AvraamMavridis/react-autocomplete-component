@@ -1,25 +1,42 @@
 {
   "name": "react-autofill",
   "version": "1.0.0",
-  "description": "React autocomplete component",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "https://github.com/AvraamMavridis/react-autofill",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AvraamMavridis/react-autofill.git"
+    "url": "https://github.com/AvraamMavridis/react-autofill"
   },
-  "keywords": [
-    "react",
-    "autocomplete",
-    "autofill",
-    "component"
-  ],
-  "author": "Avraam Mavridis",
+  "author": "Avraam Mavridis <avr.mav@gmail.com>",
+  "description": "react autocomplete component",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register",
+    "compile": "babel --presets es2015,stage-0,react -d lib/ src/",
+    "prepublish": "npm run compile",
+    "watch": "npm-scripts-watcher"
+  },
+  "watch": {
+    "src/**/*.js": [
+      "compile"
+    ]
+  },
+  "keywords": ["react", "autocomplete", "autofill", "component"],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AvraamMavridis/react-autofill/issues"
+  "dependencies": {
+    "react": "^0.14.3"
   },
-  "homepage": "https://github.com/AvraamMavridis/react-autofill#readme"
+  "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-core": "^6.1.18",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babel-register": "^6.3.13",
+    "chai": "^2.0.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-config-google": "^0.3.0",
+    "eslint-plugin-react": "^3.11.2",
+    "mocha": "^2.1.0"
+  }
 }
