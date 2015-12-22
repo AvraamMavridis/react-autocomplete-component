@@ -1,10 +1,10 @@
 {
-  "name": "react-autofill",
-  "version": "1.0.0",
-  "homepage": "https://github.com/AvraamMavridis/react-autofill",
+  "name": "react-autocomplete-component",
+  "version": "1.0.1",
+  "homepage": "https://github.com/AvraamMavridis/react-autocomplete-component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AvraamMavridis/react-autofill"
+    "url": "https://github.com/AvraamMavridis/react-autocomplete-component"
   },
   "author": "Avraam Mavridis <avr.mav@gmail.com>",
   "description": "react autocomplete component",
