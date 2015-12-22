@@ -1,6 +1,8 @@
 # react-autocomplete-component
 A simple auto-complete component with onOpen, onClose, and onSelect callbacks
 
+[![NPM](https://nodei.co/npm/react-autocomplete-component.png?mini=true)](https://nodei.co/npm/react-autocomplete-component/)
+
 ###How to use it:
 
 ```javascript
