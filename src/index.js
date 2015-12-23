@@ -7,7 +7,20 @@
 import { React } from 'react';
 
 class AutoComplete extends React.Component {
-
+    
+   /**
+   * Props validation
+   */
+    static propTypes = {
+      inputStyle : React.PropTypes.object,
+      optionStyle   : React.PropTypes.object,
+      optionsContainerStyle   : React.PropTypes.object,
+      selectedStyle   : React.PropTypes.object,
+      onOpen    : React.PropTypes.func,
+      onClose   : React.PropTypes.func,
+      onSelect  : React.PropTypes.func.isRequired
+    }
+    
     static defaultProps = {
       inputStyle : {
         width : '100px',
@@ -34,7 +47,6 @@ class AutoComplete extends React.Component {
       },
       onOpen   : () => null,
       onClose  : () => null,
-      onSelect : () => null,
     }
 
     constructor() {
