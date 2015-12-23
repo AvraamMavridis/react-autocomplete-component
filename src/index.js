@@ -14,17 +14,23 @@ class AutoComplete extends React.Component {
       },
       optionStyle : {
         borderBottom : '1px solid grey',
+        lineHeight: '25px'
       },
       optionsContainerStyle : {
-        width           : '100px',
-        backgroundColor : 'White',
-        position        : 'absolute',
-        border          : '1px solid black',
-        margin          : '-2px 0px',
-        padding         : '0px 1px',
+        width: '100px',
+        backgroundColor: 'White',
+        borderLeft: '1px solid black',
+        borderRight: '1px solid black',
+        margin: '2px 0px',
+        padding: '0px 1px',
+        listStyle: 'none',
+        maxHeight: '100px',
+        overflow: 'auto',
+        textIndent: '10px'
       },
       selectedStyle : {
-        backgroundColor : 'LightSkyBlue',
+        lineHeight: '25px',
+        backgroundColor : 'LightSkyBlue'
       },
       onOpen   : () => null,
       onClose  : () => null,
