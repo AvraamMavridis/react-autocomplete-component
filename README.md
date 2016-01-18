@@ -30,6 +30,7 @@ A simple auto-complete component with onOpen, onClose, and onSelect callbacks
 ###Changelog:
 
 18-01-2016 Release version 1.1.0
+
 21-12-2015 Release version 1.0.0
 
 ### Contribute
