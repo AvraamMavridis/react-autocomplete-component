@@ -6,7 +6,7 @@ A simple auto-complete component with onOpen, onClose, and onSelect callbacks
 ###How to use it:
 
 ```javascript
-  <Autocomplete options={..} onOpen={..} onClose={..} onSelect={..} />
+  <Autocomplete options={..} onOpen={..} onClose={..} onSelect={..} caseSensitive={} maxOptions={}  />
   ``` 
   
 ### [Demo](http://avraammavridis.github.io/react-autocomplete-component/)
@@ -23,6 +23,8 @@ A simple auto-complete component with onOpen, onClose, and onSelect callbacks
 | optionStyle | overrides the default style for the options  | 
 | optionsContainerStyle | overrides the default style for the options container | 
 | selectedStyle | overrides the default style for the selected option  |  
+| caseSensitive (default true) | determines if the filtering will be case sensitive  |  
+| maxOptions  | determines how many options will be showed to the user  |  
 
 
 ###Changelog:
