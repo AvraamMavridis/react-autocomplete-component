@@ -4,9 +4,24 @@
 * @author  Avraam Mavridis      <avr.mav@gmail.com>
 *
 */
-import { React } from 'react';
+import React, { Component } from 'react';
 
-class AutoComplete extends React.Component {
+class AutoComplete extends Component {
+
+   /**
+   * Props validation
+   */
+    static propTypes = {
+      inputStyle : React.PropTypes.object,
+      optionStyle   : React.PropTypes.object,
+      optionsContainerStyle   : React.PropTypes.object,
+      selectedStyle   : React.PropTypes.object,
+      onOpen    : React.PropTypes.func,
+      onClose   : React.PropTypes.func,
+      onSelect  : React.PropTypes.func.isRequired,
+      caseSensitive : React.PropTypes.bool,
+      maxOptions : React.PropTypes.number
+    }
 
     static defaultProps = {
       inputStyle : {
@@ -14,21 +29,28 @@ class AutoComplete extends React.Component {
       },
       optionStyle : {
         borderBottom : '1px solid grey',
+        lineHeight: '25px'
       },
       optionsContainerStyle : {
-        width           : '100px',
-        backgroundColor : 'White',
-        position        : 'absolute',
-        border          : '1px solid black',
-        margin          : '-2px 0px',
-        padding         : '0px 1px',
+        width: '100px',
+        backgroundColor: 'White',
+        borderLeft: '1px solid black',
+        borderRight: '1px solid black',
+        margin: '2px 0px',
+        padding: '0px 1px',
+        listStyle: 'none',
+        maxHeight: '100px',
+        overflow: 'auto',
+        textIndent: '10px'
       },
       selectedStyle : {
-        backgroundColor : 'LightSkyBlue',
+        lineHeight: '25px',
+        backgroundColor : 'LightSkyBlue'
       },
+      options  : [],
       onOpen   : () => null,
       onClose  : () => null,
-      onSelect : () => null,
+      caseSensitive : true,
     }
 
     constructor() {
@@ -86,7 +108,12 @@ class AutoComplete extends React.Component {
      * @return { void }
      */
     onType( e ) {
-      const _opt = this.props.options.filter( ( opt ) => opt.indexOf( e.target.value ) > -1 );
+      const caseSensitive = this.props.caseSensitive;
+      const maxOptions = this.props.maxOptions || Infinity;
+      let value = e.target.value;
+
+      const _opt = this.props.options.filter( ( opt ) => caseSensitive ? opt.indexOf( value ) > -1 : opt.toLowerCase().indexOf( value.toLowerCase() ) > -1 ).slice( 0, maxOptions) ;
+
       this.setState( {
         options       : !!e.target.value ? _opt : [],
         value         : e.target.value,
@@ -154,7 +181,7 @@ class AutoComplete extends React.Component {
         <input ref="inputElement" style={ inputStyle } onChange={ this.onType.bind( this ) } type="text" value={ this.state.value }/>
           <ul tabIndex="0" style={optionsContainerStyle}>
           {
-          this.state.options.map( ( r, index ) => <li style={ this.state.selectedIndex === index ? selectedStyle : optionStyle }
+          this.state.options.map( ( r, index ) => <li key={ index } style={ this.state.selectedIndex === index ? selectedStyle : optionStyle }
             onClick={ this.onOptionClick.bind( this ) }
             tabIndex={ index } className={ this.state.selectedIndex === index ? 'selected' : '' }> { r } </li> )
           }
@@ -162,6 +189,5 @@ class AutoComplete extends React.Component {
       </div> );
     }
   }
-
 
 export default AutoComplete;
