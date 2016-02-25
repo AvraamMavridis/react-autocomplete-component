@@ -4,9 +4,9 @@
 * @author  Avraam Mavridis      <avr.mav@gmail.com>
 *
 */
-import { React } from 'react';
+import React, { Component } from 'react';
 
-class AutoComplete extends React.Component {
+class AutoComplete extends Component {
 
    /**
    * Props validation
@@ -113,7 +113,7 @@ class AutoComplete extends React.Component {
       let value = e.target.value;
 
       const _opt = this.props.options.filter( ( opt ) => caseSensitive ? opt.indexOf( value ) > -1 : opt.toLowerCase().indexOf( value.toLowerCase() ) > -1 ).slice( 0, maxOptions) ;
-      
+
       this.setState( {
         options       : !!e.target.value ? _opt : [],
         value         : e.target.value,
@@ -181,7 +181,7 @@ class AutoComplete extends React.Component {
         <input ref="inputElement" style={ inputStyle } onChange={ this.onType.bind( this ) } type="text" value={ this.state.value }/>
           <ul tabIndex="0" style={optionsContainerStyle}>
           {
-          this.state.options.map( ( r, index ) => <li style={ this.state.selectedIndex === index ? selectedStyle : optionStyle }
+          this.state.options.map( ( r, index ) => <li key={ index } style={ this.state.selectedIndex === index ? selectedStyle : optionStyle }
             onClick={ this.onOptionClick.bind( this ) }
             tabIndex={ index } className={ this.state.selectedIndex === index ? 'selected' : '' }> { r } </li> )
           }
