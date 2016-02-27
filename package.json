@@ -1,6 +1,6 @@
 {
   "name": "react-autocomplete-component",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://github.com/AvraamMavridis/react-autocomplete-component",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "component"
   ],
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^0.14.3"
   },
   "devDependencies": {
