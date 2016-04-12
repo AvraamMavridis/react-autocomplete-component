@@ -44,3 +44,7 @@ Any pull-request is more than welcome :boom: :smile:
 ### License
 
 MIT
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AvraamMavridis/react-autocomplete-component/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
