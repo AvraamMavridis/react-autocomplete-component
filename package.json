@@ -40,7 +40,7 @@
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "eslint": "^2.7.0",
-    "eslint-config-airbnb": "^7.0.0",
+    "eslint-config-airbnb": "^9.0.1",
     "eslint-config-google": "^0.4.0",
     "eslint-plugin-react": "^5.0.1",
     "mocha": "^2.1.0"
