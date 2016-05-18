@@ -39,7 +39,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
-    "eslint": "^2.7.0",
+    "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.0",
     "eslint-config-google": "^0.4.0",
     "eslint-plugin-react": "^5.0.1",
