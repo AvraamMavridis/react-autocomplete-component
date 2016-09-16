@@ -43,6 +43,6 @@
     "eslint-config-airbnb": "^9.0.0",
     "eslint-config-google": "^0.4.0",
     "eslint-plugin-react": "^6.2.1",
-    "mocha": "^2.1.0"
+    "mocha": "^2.5.3"
   }
 }
