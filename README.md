@@ -8,15 +8,15 @@ A simple auto-complete component with onOpen, onClose, and onSelect callbacks
 ###How to use it:
 
 ```javascript
-  <Autocomplete options={..} onOpen={..} onClose={..} onSelect={..} caseSensitive={} maxOptions={}  />
-  ```
+<Autocomplete options={..} onOpen={..} onClose={..} onSelect={..} caseSensitive={} maxOptions={} />
+```
 
 ### [Demo](http://avraammavridis.github.io/react-autocomplete-component/)
 
 ###Options:
 
 | Name        | Description           
-| ------------- |-------------:|
+| ------------- |-------------|
 | options     | array of values that will be used for the autocomplete |
 | onOpen    | callback function that will be called when the list of options opens    |  
 | onClose | callback function that will be called when the list of options closes  |
