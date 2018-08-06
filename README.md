@@ -46,5 +46,5 @@ Any pull-request is more than welcome :boom: :smile:
 MIT
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AvraamMavridis/react-autocomplete-component/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AvraamMavridis/react-autocomplete-component/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Greenkeeper badge](https://badges.greenkeeper.io/AvraamMavridis/react-autocomplete-component.svg)](https://greenkeeper.io/)
 
